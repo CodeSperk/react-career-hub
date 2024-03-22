@@ -36,7 +36,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="text-2xl md:text-3xl font-bold">Career<span className="text-red-500">Hub</span></a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-4">
@@ -44,7 +44,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="bg-red-500 text-white px-6 font-semibold py-2 rounded-lg hover:bg-red-600">Apply</a>
       </div>
     </div>
   );
