@@ -13,7 +13,7 @@ const AppliedJobs = () => {
 
     const filteredAppliedJobs = allJobs.filter(job=> storedJobIds.includes(job.id))
     setAppliedJobs(filteredAppliedJobs);
-  },[]);
+  },[allJobs]);
 
  
 
