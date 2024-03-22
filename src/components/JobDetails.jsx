@@ -1,8 +1,16 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveJobApplication } from "../utilities/localStorage";
 
 const JobDetails = () => {
   const jobs = useLoaderData();
   const { id } = useParams();
+  const idInt = parseInt(id);
+
+  const handleApplyJob = () => {
+    saveJobApplication(idInt)
+    
+  }
+
 
   const job = jobs.find((job) => job.id === parseInt(id));
   return (
@@ -32,7 +40,7 @@ const JobDetails = () => {
     <aside className="bg-red-100 p-4 md:p6 md:col-span-2 flex flex-col justify-between">
       <h4 className="font-bold border-b border-[#b98888] pb-4">Job Details</h4>
 
-      <button className="w-full bg-red-500  hover:bg-red-700 rounded-md py-2 px-4 text-white text-lg font-medium">Apply Now</button>
+      <button onClick={handleApplyJob} className="w-full bg-red-500  hover:bg-red-700 rounded-md py-2 px-4 text-white text-lg font-medium">Apply Now</button>
     </aside>
    </div>
   );
