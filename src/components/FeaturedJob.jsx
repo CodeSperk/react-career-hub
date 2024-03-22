@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 const FeaturedJob = ({job}) => {
-  const {job_title, logo, salary, location, company_name, job_type, remote_or_onsite} = job;
+  const {id, job_title, logo, salary, location, company_name, job_type, remote_or_onsite} = job;
   return (
     <div className="flex flex-col space-y-2 border border-red-400 p-4 rounded-lg">
       <img src={logo} alt={job_title} className="w-20 h-10"/>
@@ -16,7 +16,7 @@ const FeaturedJob = ({job}) => {
         <p>Salary: {salary}</p>
       </div>
 
-      <NavLink>
+      <NavLink to={`job/${id}`}>
         <button className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">View Details</button>
       </NavLink>
 

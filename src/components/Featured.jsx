@@ -15,7 +15,7 @@ const Featured = () => {
 
 
   return (
-    <section className="mt-10 md:mt-16 lg:mt-24 text-center">
+    <section className="mt-10 md:mt-16 lg:mt-24">
       <SectionHeader
         title={"Featured Jobs"}
         description={
@@ -29,7 +29,7 @@ const Featured = () => {
       }
       </div>
    
-     <div className={dataLength===jobs.length && "hidden"}>
+     <div className={`text-center ${dataLength===jobs.length && "hidden"}`}>
      <button onClick={()=>setDataLength(jobs.length)} className="bg-red-500 hover:bg-red-700 py-3 px-6 rounded-lg text-white text-xl mt-8">Show all</button>
      </div>
      
